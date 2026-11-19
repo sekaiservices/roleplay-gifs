@@ -18,7 +18,7 @@ A curated collection of high-quality anime roleplay GIFs, organized by action ca
 ## Direct URL pattern
 
 ```
-https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/{category}/{n}.gif
+https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/{category}/{n}.gif
 ```
 
 Replace `{category}` with any category name and `{n}` with a number from `1` to the category's count.
@@ -27,11 +27,11 @@ Replace `{category}` with any category name and `{n}` with a number from `1` to 
 
 ## index.json
 
-The [index.json](https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/index.json) file at the root of this repo contains all category names and their GIF counts. Fetch it once and use it to resolve valid ranges without hardcoding anything.
+The [index.json](https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/index.json) file at the root of this repo contains all category names and their GIF counts. Fetch it once and use it to resolve valid ranges without hardcoding anything.
 
 ```json
 {
-  "base_url": "https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main",
+  "base_url": "https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main",
   "total_categories": 70,
   "total_gifs": 1114,
   "categories": {
@@ -51,7 +51,7 @@ The [index.json](https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/i
 ```js
 async function randomGif(category) {
   const index = await fetch(
-    "https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/index.json"
+    "https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/index.json"
   ).then((r) => r.json());
 
   const count = index.categories[category];
@@ -75,7 +75,7 @@ import random
 
 def random_gif(category: str) -> str:
     index = httpx.get(
-        "https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/index.json"
+        "https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/index.json"
     ).json()
 
     count = index["categories"].get(category)
@@ -87,7 +87,7 @@ def random_gif(category: str) -> str:
 
 # Example
 print(random_gif("pat"))
-# https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/pat/3.gif
+# https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/pat/3.gif
 ```
 
 ### Fetching a specific GIF
@@ -95,9 +95,9 @@ print(random_gif("pat"))
 If you already know the category and want a specific GIF, you can construct the URL directly:
 
 ```
-https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/hug/1.gif
-https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/slap/4.gif
-https://raw.githubusercontent.com/itsfizys/roleplay-gifs/main/cry/11.gif
+https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/hug/1.gif
+https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/slap/4.gif
+https://raw.githubusercontent.com/sekaiservices/roleplay-gifs/main/cry/11.gif
 ```
 ---
 
